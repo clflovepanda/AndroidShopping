@@ -75,134 +75,165 @@
     <!-- script for this page only-->
     <script>
         window.onload = function() {
-//            $.ajax({
-//                url: "/countData",
-//                dataType: "json",
-//                type: "type",
-//                success: function() {
-//
-//                },
-//                error: function() {
-//
-//
-//                }
-//            });
-
-            // 基于准备好的dom，初始化echarts实例
-            var lineChart = echarts.init(document.getElementById('line-chart'));
-
-            var colors = ['#293c55', '#d14a61', '#675bba'];
-
-            // 指定图表的配置项和数据
-            lineChartOption = {
-                color:colors,
-                tooltip: {
-                    trigger: 'axis'
-                },
-                toolbox: {
-                    feature: {
-                        dataView: {show: true, readOnly: false},
-                        magicType: {show: true, type: ['line', 'bar']},
-                        restore: {show: true},
-                        saveAsImage: {show: true}
-                    }
-                },
-                legend: {
-                    data:['订单量','交易额']
-                },
-                xAxis: [
-                    {
-                        type: 'category',
-                        data: ['2月1日','2月2日','2月3日','2月4日','2月5日','2月6日','2月7日','2月8日','2月9日','2月10日']
-                    }
-                ],
-                yAxis: [
-                    {
-                        type: 'value',
-                        name: '订单量',
-                        min: 0,
-                        max: 100,
-                        interval: 10
-                    }
-                    ,
-                    {
-                        type: 'value',
-                        name: '交易额',
-                        min: 0,
-                        max: 2000,
-                        interval: 200
-                    }
-                ],
-                series: [
-                    {
-                        name:'订单量',
-                        type:'bar',
-                        data:[2, 4, 8, 14, 20, 30, 35, 40, 45, 50]
-                    },
-                    {
-                        name:'交易额',
-                        type:'line',
-                        yAxisIndex: 1,
-                        data:[80, 160, 320, 420, 700, 900, 1050, 1350, 1500, 1800]
-                    }
-                ]
-            };
-
-            // 使用刚指定的配置项和数据显示图表。
-            lineChart.setOption(lineChartOption);
-
-            var pieChart = echarts.init(document.getElementById('pie-chart'));
-            pieChartOption = {
-                title : {
-                    text: '各类蛋糕销售占比',
-                    subtext: '近十日综合',
-                    x:'center'
-                },
-                tooltip : {
-                    trigger: 'item',
-                    formatter: "{a} <br/>{b} : {c} ({d}%)"
-                },
-                legend: {
-                    orient: 'vertical',
-                    left: 'left',
-                    data: ['巧克力蛋糕','冰淇淋蛋糕','鲜奶油蛋糕','水果蛋糕','慕斯蛋糕']
-                },
-                series : [
-                    {
-                        name: '蛋糕销售量',
-                        type: 'pie',
-                        radius : '55%',
-                        center: ['50%', '60%'],
-                        data:[
-                            {value:335, name:'巧克力蛋糕'},
-                            {value:310, name:'冰淇淋蛋糕'},
-                            {value:234, name:'鲜奶油蛋糕'},
-                            {value:135, name:'水果蛋糕'},
-                            {value:1548, name:'慕斯蛋糕'}
-                        ],
-                        itemStyle: {
-                            emphasis: {
-                                shadowBlur: 10,
-                                shadowOffsetX: 0,
-                                shadowColor: 'rgba(0, 0, 0, 0.5)'
-                            }
+            var countNum = [],
+                    countPrice = [],
+                    countDate = [],
+                   pieData = [];
+            $.ajax({
+                url: "",
+                dataType: "json",
+                type: "type",
+                complete: function(res) {
+                    res = {
+                        code:0,
+                        data: {
+                            left: [{orderNum: 100, totalPrice: 200, dt: 20130607},{orderNum: 20, totalPrice: 200, dt: 20130607},
+                                {orderNum: 40, totalPrice: 20, dt: 20130607},
+                                {orderNum: 20, totalPrice: 200, dt: 20130607},
+                                {orderNum: 40, totalPrice: 100, dt: 20130607},
+                                {orderNum: 30, totalPrice: 200, dt: 20130607},
+                                {orderNum: 60, totalPrice: 300, dt: 20130607},
+                                {orderNum: 7, totalPrice: 200, dt: 20130607},
+                                {orderNum: 70, totalPrice: 200, dt: 20130607}],
+                            right: [{goodsId: 1, goodsName: "哈哈", saleNum : 10},
+                                {goodsId: 1, goodsName: "哈哈", saleNum : 10},
+                                {goodsId: 1, goodsName: "哈哈", saleNum : 10},
+                                {goodsId: 1, goodsName: "哈哈", saleNum : 10},
+                                {goodsId: 1, goodsName: "哈哈", saleNum : 10},
+                                {goodsId: 1, goodsName: "哈哈", saleNum : 10},{goodsId: 1, goodsName: "哈哈", saleNum : 10},
+                                {goodsId: 1, goodsName: "哈哈", saleNum : 10}]
                         }
                     }
-                ]
-            };
-            pieChart.setOption(pieChartOption);
+                    if(res.code == 0) {
+                        for(p in res.data.left){
+                            countNum.push(res.data.left[p].orderNum);
+                            countPrice.push(res.data.left[p].totalPrice);
+                            countDate.push(res.data.left[p].dt.toString().substr(4));
+                        }
+                        for(p in res.data.right){
+                            pieData.push({value: res.data.right[p].saleNum, name: res.data.right[p].goodsName})
+                        }
+                        drawCart();
+                    }
 
-            Morris.Donut({
-                element: 'hero-donut',
-                data: [
-                    {label: '巧克力蛋糕', value: 25 },
-                    {label: '冰激凌蛋糕', value: 40 },
-                    {label: '鲜奶油蛋糕', value: 25 },
-                    {label: '水果蛋糕', value: 10 }
-                ],
-                colors: ['#41cac0', '#49e2d7', '#34a39b'],
-                formatter: function (y) { return y + "%" }
+                },
+                error: function() {
+
+
+                }
             });
+          function drawCart() {
+              // 基于准备好的dom，初始化echarts实例
+              var lineChart = echarts.init(document.getElementById('line-chart'));
+
+              var colors = ['#293c55', '#d14a61', '#675bba'];
+
+              // 指定图表的配置项和数据
+              lineChartOption = {
+                  color:colors,
+                  tooltip: {
+                      trigger: 'axis'
+                  },
+                  toolbox: {
+                      feature: {
+                          dataView: {show: true, readOnly: false},
+                          magicType: {show: true, type: ['line', 'bar']},
+                          restore: {show: true},
+                          saveAsImage: {show: true}
+                      }
+                  },
+                  legend: {
+                      data:['订单量','交易额']
+                  },
+                  xAxis: [
+                      {
+                          type: 'category',
+                          data: countDate
+                      }
+                  ],
+                  yAxis: [
+                      {
+                          type: 'value',
+                          name: '订单量',
+                          min: 0,
+                          max: 100,
+                          interval: 10
+                      }
+                      ,
+                      {
+                          type: 'value',
+                          name: '交易额',
+                          min: 0,
+                          max: 1000,
+                          interval: 100
+                      }
+                  ],
+                  series: [
+                      {
+                          name:'订单量',
+                          type:'bar',
+                          data: countNum
+                      },
+                      {
+                          name:'交易额',
+                          type:'line',
+                          yAxisIndex: 1,
+                          data:countPrice
+                      }
+                  ]
+              };
+
+              // 使用刚指定的配置项和数据显示图表。
+              lineChart.setOption(lineChartOption);
+
+              var pieChart = echarts.init(document.getElementById('pie-chart'));
+              console.log(pieData[0]);
+              pieChartOption = {
+                  title : {
+                      text: '各类蛋糕销售占比',
+                      subtext: '近十日综合',
+                      x:'center'
+                  },
+                  tooltip : {
+                      trigger: 'item',
+                      formatter: "{a} <br/>{b} : {c} ({d}%)"
+                  },
+//                  legend: {
+//                      orient: 'vertical',
+//                      left: 'left',
+//                      data: ['巧克力蛋糕','冰淇淋蛋糕','鲜奶油蛋糕','水果蛋糕','慕斯蛋糕']
+//                  },
+                  series : [
+                      {
+                          name: '蛋糕销售量',
+                          type: 'pie',
+                          radius : '55%',
+                          center: ['50%', '60%'],
+                          data:pieData,
+                          itemStyle: {
+                              emphasis: {
+                                  shadowBlur: 10,
+                                  shadowOffsetX: 0,
+                                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+                              }
+                          }
+                      }
+                  ]
+              };
+              pieChart.setOption(pieChartOption);
+
+              Morris.Donut({
+                  element: 'hero-donut',
+//                  data: [
+//                      {label: '巧克力蛋糕', value: 25 },
+//                      {label: '冰激凌蛋糕', value: 40 },
+//                      {label: '鲜奶油蛋糕', value: 25 },
+//                      {label: '水果蛋糕', value: 10 }
+//                  ],
+                  colors: ['#41cac0', '#49e2d7', '#34a39b'],
+                  formatter: function (y) { return y + "%" }
+              });
+          }
         }
     </script>
   </body>

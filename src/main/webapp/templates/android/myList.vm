@@ -72,7 +72,7 @@
         #end
     <div class="ddfk">
             <ul>
-                <li class="li5">订单付款：￥${info.getTotalPrice()}</li>
+                <li class="li5">订单付款：<span style="color:red">￥${info.getTotalPrice()}</span></li>
                 #if(${info.getStatus()}==1)
                     <li class="li6"><a href="/android/confirmOrder?userId=${userId}&userName=${userName}&type=${type}&orderId=${info.getId()}"><button type="button">确认收货</button></a></li>
                     <li class="li6"><a href="/android/cancelOrder?userId=${userId}&userName=${userName}&type=${type}&orderId=${info.getId()}"><button type="button">取消订单</button></a></li>
