@@ -122,7 +122,7 @@
         </ul>
         <div class="ycmenu">
             <ul>
-                <li><a href="allGoods.html" class="a">全部商品</a></li>
+                <li><a href="/android/main?userName=${userName}" class="a">全部商品</a></li>
                 #foreach( ${info} in ${typeDomains})
                     #if(${info.getId()} == 8)
                         <li><a href="/android/diyTypeList?type=${info.getId()}&userName=${userName}&userId=${userId}">${info.getTypeName()}</a></li>

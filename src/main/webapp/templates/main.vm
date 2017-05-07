@@ -75,6 +75,18 @@
     <!-- script for this page only-->
     <script>
         window.onload = function() {
+//            $.ajax({
+//                url: "/countData",
+//                dataType: "json",
+//                type: "type",
+//                success: function() {
+//
+//                },
+//                error: function() {
+//
+//
+//                }
+//            });
 
             // 基于准备好的dom，初始化echarts实例
             var lineChart = echarts.init(document.getElementById('line-chart'));

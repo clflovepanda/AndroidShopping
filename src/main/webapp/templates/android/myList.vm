@@ -42,7 +42,7 @@
     <div class="ddbh">
         <ul>
             <li class="li1">¶©µ¥±àºÅ£º${info.getId()}</li>
-            <li class="li2"><button type="button">
+            <li class="li2"><button type="button" style="background: #4baab2">
             #if(${info.getStatus()}==1)
                 ´ýÊÕ»õ
             #elseif(${info.getStatus()}==2)
