@@ -80,41 +80,53 @@
                     countDate = [],
                    pieData = [];
             $.ajax({
-                url: "",
+                url: "/orderSaleInfo",
                 dataType: "json",
-                type: "type",
-                complete: function(res) {
-                    res = {
-                        code:0,
-                        data: {
-                            left: [{orderNum: 100, totalPrice: 200, dt: 20130607},{orderNum: 20, totalPrice: 200, dt: 20130607},
-                                {orderNum: 40, totalPrice: 20, dt: 20130607},
-                                {orderNum: 20, totalPrice: 200, dt: 20130607},
-                                {orderNum: 40, totalPrice: 100, dt: 20130607},
-                                {orderNum: 30, totalPrice: 200, dt: 20130607},
-                                {orderNum: 60, totalPrice: 300, dt: 20130607},
-                                {orderNum: 7, totalPrice: 200, dt: 20130607},
-                                {orderNum: 70, totalPrice: 200, dt: 20130607}],
-                            right: [{goodsId: 1, goodsName: "込込", saleNum : 10},
-                                {goodsId: 1, goodsName: "込込", saleNum : 10},
-                                {goodsId: 1, goodsName: "込込", saleNum : 10},
-                                {goodsId: 1, goodsName: "込込", saleNum : 10},
-                                {goodsId: 1, goodsName: "込込", saleNum : 10},
-                                {goodsId: 1, goodsName: "込込", saleNum : 10},{goodsId: 1, goodsName: "込込", saleNum : 10},
-                                {goodsId: 1, goodsName: "込込", saleNum : 10}]
+                type: "get",
+                success: function(res) {
+//                    res = {
+//                        code:0,
+//                        data: {
+//                            left: [{orderNum: 100, totalPrice: 200, dt: 20130607},{orderNum: 20, totalPrice: 200, dt: 20130607},
+//                                {orderNum: 40, totalPrice: 20, dt: 20130607},
+//                                {orderNum: 20, totalPrice: 200, dt: 20130607},
+//                                {orderNum: 40, totalPrice: 100, dt: 20130607},
+//                                {orderNum: 30, totalPrice: 200, dt: 20130607},
+//                                {orderNum: 60, totalPrice: 300, dt: 20130607},
+//                                {orderNum: 7, totalPrice: 200, dt: 20130607},
+//                                {orderNum: 70, totalPrice: 200, dt: 20130607}],
+//                            right: [{goodsId: 1, goodsName: "込込", saleNum : 10},
+//                                {goodsId: 1, goodsName: "込込", saleNum : 10},
+//                                {goodsId: 1, goodsName: "込込", saleNum : 10},
+//                                {goodsId: 1, goodsName: "込込", saleNum : 10},
+//                                {goodsId: 1, goodsName: "込込", saleNum : 10},
+//                                {goodsId: 1, goodsName: "込込", saleNum : 10},{goodsId: 1, goodsName: "込込", saleNum : 10},
+//                                {goodsId: 1, goodsName: "込込", saleNum : 10}]
+//                        }
+//                    }
+                    console.log(res);
+                        for(p in res){
+                            countNum.push(res[p].orderNum);
+                            countPrice.push(res[p].totalPrice);
+                            countDate.push(res[p].dt.toString().substr(4));
                         }
-                    }
-                    if(res.code == 0) {
-                        for(p in res.data.left){
-                            countNum.push(res.data.left[p].orderNum);
-                            countPrice.push(res.data.left[p].totalPrice);
-                            countDate.push(res.data.left[p].dt.toString().substr(4));
+//                        drawCart();
+                },
+                error: function() {
+
+
+                }
+            });
+            $.ajax({
+                url: "/goodsSaleInfo",
+                dataType: "json",
+                type: "get",
+                success: function(res) {
+                    console.log(res);
+                        for(p in res){
+                            pieData.push({value: res[p].saleNum, name: res[p].goodsName})
                         }
-                        for(p in res.data.right){
-                            pieData.push({value: res.data.right[p].saleNum, name: res.data.right[p].goodsName})
-                        }
-                        drawCart();
-                    }
+                    drawCart();
 
                 },
                 error: function() {
@@ -157,15 +169,15 @@
                           name: '匡汽楚',
                           min: 0,
                           max: 100,
-                          interval: 10
+                          interval: 16
                       }
                       ,
                       {
                           type: 'value',
                           name: '住叟駆',
                           min: 0,
-                          max: 1000,
-                          interval: 100
+                          max: 12000,
+                          interval: 1000
                       }
                   ],
                   series: [
@@ -187,7 +199,6 @@
               lineChart.setOption(lineChartOption);
 
               var pieChart = echarts.init(document.getElementById('pie-chart'));
-              console.log(pieData[0]);
               pieChartOption = {
                   title : {
                       text: '光窃軌呉��弁媼曳',

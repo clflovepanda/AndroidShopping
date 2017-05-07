@@ -6,6 +6,8 @@ public class ShopOrderGoodsMapping {
     private int orderId;
     private int goodsId;
     private int num;
+    private int ctime;
+    private int utime;
 
     public int getId() {
         return id;
@@ -37,5 +39,20 @@ public class ShopOrderGoodsMapping {
 
     public void setNum(int num) {
         this.num = num;
+    }
+    public int getCtime() {
+        return ctime;
+    }
+
+    public void setCtime(int ctime) {
+        this.ctime = ctime;
+    }
+
+    public int getUtime() {
+        return utime;
+    }
+
+    public void setUtime(int utime) {
+        this.utime = utime;
     }
 }

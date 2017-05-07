@@ -30,9 +30,9 @@ public class AndroidOrderController extends PublicController {
     @RequestMapping(value = "/confirmOrder", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView confirmOrder(@RequestParam("userName") String userName,
-                                    @RequestParam("userId") int userId,
-                                    @RequestParam("orderId") int orderId,
-                                    @RequestParam("type") int type) throws IOException {
+                                     @RequestParam("userId") int userId,
+                                     @RequestParam("orderId") int orderId,
+                                     @RequestParam("type") int type) throws IOException {
 
         ShopOrder shopOrder = orderService.getShopOrder(orderId);
         shopOrder.setStatus(2);

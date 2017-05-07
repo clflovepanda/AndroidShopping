@@ -16,6 +16,7 @@ public class ShopOrder {
     private int sign;
     private int isDiy;
     private String msg;
+    private String dt;
 
     public int getSign() {
         return sign;
@@ -127,5 +128,13 @@ public class ShopOrder {
 
     public void setUtime(int utime) {
         this.utime = utime;
+    }
+
+    public String getDt() {
+        return dt;
+    }
+
+    public void setDt(String dt) {
+        this.dt = dt;
     }
 }
