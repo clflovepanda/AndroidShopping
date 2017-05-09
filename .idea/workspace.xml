@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b993374e-ebe9-4697-a0e8-3a0909f9d37b" name="Default" comment="liuwenwen">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/TestController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/domain/dto/GoodsSaleInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/domain/dto/OrderSaleInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/controllers/android/AndroidPayController.class" afterPath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/controllers/android/AndroidPayController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/dao/ShopOrderDao.class" afterPath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/dao/ShopOrderDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/dao/ShopOrderGoodsMappingDao.class" afterPath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/dao/ShopOrderGoodsMappingDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/domain/ShopOrder.class" afterPath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/domain/ShopOrder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/domain/ShopOrderGoodsMapping.class" afterPath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/domain/ShopOrderGoodsMapping.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/service/OrderGoodsMappingService.class" afterPath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/service/OrderGoodsMappingService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/service/OrderService.class" afterPath="$PROJECT_DIR$/target/classes/com/clibchina/shopping/service/OrderService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/android/AndroidOrderController.java" afterPath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/android/AndroidOrderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/android/AndroidPayController.java" afterPath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/android/AndroidPayController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/dao/ShopOrderDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/dao/ShopOrderDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/dao/ShopOrderGoodsMappingDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/dao/ShopOrderGoodsMappingDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/domain/ShopOrder.java" afterPath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/domain/ShopOrder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/domain/ShopOrderGoodsMapping.java" afterPath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/domain/ShopOrderGoodsMapping.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/service/OrderGoodsMappingService.java" afterPath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/service/OrderGoodsMappingService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/service/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/service/OrderService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/templates/head.vm" afterPath="$PROJECT_DIR$/src/main/webapp/templates/head.vm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/templates/main.vm" afterPath="$PROJECT_DIR$/src/main/webapp/templates/main.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="AndroidShopping.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,23 +30,10 @@
       <file leaf-file-name="TestController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="63" column="42" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="42" />
+            <state relative-caret-position="23">
+              <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShopOrder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/domain/ShopOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="120" column="32" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="32" />
-              <folding>
-                <element signature="e#2400#2401#0" expanded="true" />
-                <element signature="e#2428#2429#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,28 +42,32 @@
       <file leaf-file-name="AndroidPayController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/android/AndroidPayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
+            <state relative-caret-position="855">
               <caret line="82" column="47" selection-start-line="82" selection-start-column="47" selection-end-line="82" selection-end-column="47" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidOrderController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/android/AndroidOrderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.vm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/main.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="178" column="33" selection-start-line="178" selection-start-column="33" selection-end-line="178" selection-end-column="33" />
+            <state relative-caret-position="570">
+              <caret line="114" column="35" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
+              <folding>
+                <element signature="e#3724#3753#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="history_order.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/history_order.vm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -102,7 +76,7 @@
       <file leaf-file-name="OrderGoodsMappingService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/service/OrderGoodsMappingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
+            <state relative-caret-position="570">
               <caret line="47" column="78" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="78" />
               <folding />
             </state>
@@ -114,7 +88,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,27 +98,45 @@
       <file leaf-file-name="ShopOrderGoodsMapping.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/domain/ShopOrderGoodsMapping.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
+            <state relative-caret-position="600">
               <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
               <folding>
-                <element signature="e#755#756#0" expanded="true" />
-                <element signature="e#783#784#0" expanded="true" />
-                <element signature="e#822#823#0" expanded="true" />
-                <element signature="e#856#857#0" expanded="true" />
-                <element signature="e#885#886#0" expanded="true" />
-                <element signature="e#913#914#0" expanded="true" />
-                <element signature="e#952#953#0" expanded="true" />
-                <element signature="e#986#987#0" expanded="true" />
+                <element signature="e#239#240#0" expanded="false" />
+                <element signature="e#264#265#0" expanded="false" />
+                <element signature="e#297#298#0" expanded="false" />
+                <element signature="e#325#326#0" expanded="false" />
+                <element signature="e#356#357#0" expanded="false" />
+                <element signature="e#386#387#0" expanded="false" />
+                <element signature="e#429#430#0" expanded="false" />
+                <element signature="e#467#468#0" expanded="false" />
+                <element signature="e#498#499#0" expanded="false" />
+                <element signature="e#528#529#0" expanded="false" />
+                <element signature="e#571#572#0" expanded="false" />
+                <element signature="e#609#610#0" expanded="false" />
+                <element signature="e#636#637#0" expanded="false" />
+                <element signature="e#662#663#0" expanded="false" />
+                <element signature="e#697#698#0" expanded="false" />
+                <element signature="e#727#728#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/service/OrderService.java">
+      <file leaf-file-name="head.vm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/head.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+            <state relative-caret-position="443">
+              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/order.vm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -151,9 +145,11 @@
       <file leaf-file-name="ShopOrderDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/dao/ShopOrderDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
+            <state relative-caret-position="375">
               <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -184,7 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/Goods/shopping.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/Goods/spdd.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/Goods/Oldindex.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/templates/android/register.vm" />
@@ -235,6 +230,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/dao/ShopOrderGoodsMappingDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/templates/main.vm" />
+        <option value="$PROJECT_DIR$/src/main/webapp/templates/head.vm" />
       </list>
     </option>
   </component>
@@ -303,6 +299,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -337,7 +334,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -845,6 +841,7 @@
       <workItem from="1494040130051" duration="23278000" />
       <workItem from="1494127215799" duration="16723000" />
       <workItem from="1494162862514" duration="5225000" />
+      <workItem from="1494331820129" duration="613000" />
     </task>
     <task id="LOCAL-00001" summary="wenwen1">
       <created>1492947713876</created>
@@ -934,7 +931,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130528000" />
+    <option name="totallyTimeSpent" value="131141000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -956,13 +953,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48266298" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24397163" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29078013" sideWeight="0.49713877" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24255319" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28936172" sideWeight="0.49713877" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25943032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2586605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1027,13 +1024,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/dao/ShopUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/android/AndroidLoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -1048,7 +1038,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-86">
           <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1087,7 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,7 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1231,19 +1218,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/history_order.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="57" column="34" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/android/css/myList.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1251,7 +1229,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="68" column="36" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1259,7 +1236,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1005">
           <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1292,14 +1268,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/head.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1320,7 +1288,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
           <caret line="110" column="142" selection-start-line="110" selection-start-column="142" selection-end-line="110" selection-end-column="142" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1344,56 +1311,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/clibchina/shopping/controllers/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/clibchina/shopping/controllers/TestController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/domain/ShopOrder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1050">
           <caret line="120" column="32" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="32" />
           <folding>
-            <element signature="e#2400#2401#0" expanded="true" />
-            <element signature="e#2428#2429#0" expanded="true" />
+            <element signature="e#2400#2401#0" expanded="false" />
+            <element signature="e#2428#2429#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/android/AndroidOrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
+        <state relative-caret-position="450">
           <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/service/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
+        <state relative-caret-position="600">
           <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1141#1142#0" expanded="false" />
+            <element signature="e#1200#1201#0" expanded="false" />
+            <element signature="e#1243#1244#0" expanded="false" />
+            <element signature="e#1291#1292#0" expanded="false" />
+            <element signature="e#1505#1506#0" expanded="false" />
+            <element signature="e#1572#1573#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/dao/ShopOrderDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
+        <state relative-caret-position="375">
           <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/service/OrderGoodsMappingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
+        <state relative-caret-position="570">
           <caret line="47" column="78" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="78" />
           <folding />
         </state>
@@ -1401,25 +1372,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/android/AndroidPayController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
+        <state relative-caret-position="855">
           <caret line="82" column="47" selection-start-line="82" selection-start-column="47" selection-end-line="82" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/domain/ShopOrderGoodsMapping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
+        <state relative-caret-position="600">
           <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
           <folding>
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="false" />
+            <element signature="e#264#265#0" expanded="false" />
+            <element signature="e#297#298#0" expanded="false" />
+            <element signature="e#325#326#0" expanded="false" />
+            <element signature="e#356#357#0" expanded="false" />
+            <element signature="e#386#387#0" expanded="false" />
+            <element signature="e#429#430#0" expanded="false" />
+            <element signature="e#467#468#0" expanded="false" />
+            <element signature="e#498#499#0" expanded="false" />
+            <element signature="e#528#529#0" expanded="false" />
+            <element signature="e#571#572#0" expanded="false" />
+            <element signature="e#609#610#0" expanded="false" />
+            <element signature="e#636#637#0" expanded="false" />
+            <element signature="e#662#663#0" expanded="false" />
+            <element signature="e#697#698#0" expanded="false" />
+            <element signature="e#727#728#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1428,24 +1409,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/clibchina/shopping/controllers/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="63" column="42" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="42" />
+        <state relative-caret-position="23">
+          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/history_order.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/order.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/main.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="178" column="33" selection-start-line="178" selection-start-column="33" selection-end-line="178" selection-end-column="33" />
+        <state relative-caret-position="570">
+          <caret line="114" column="35" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
+          <folding>
+            <element signature="e#3724#3753#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/head.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
           <folding />
         </state>
       </provider>

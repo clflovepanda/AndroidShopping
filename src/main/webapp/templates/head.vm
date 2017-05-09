@@ -40,7 +40,7 @@
             location.href = url;
         }
 
-        window.onload = function() {
+//        window.onload = function() {
             setInterval(function() {
                 $.ajax({
                     type: "get",
@@ -67,6 +67,6 @@
                     }
                 });
             }, 1000)
-        }
+//        }
     </script>
 </head>

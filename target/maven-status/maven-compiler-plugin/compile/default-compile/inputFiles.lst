@@ -1,8 +1,10 @@
+/Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/domain/dto/GoodsSaleInfo.java
 /Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/service/OrderGoodsMappingService.java
 /Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/dao/ShopOrderDao.java
 /Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/domain/ShopUser.java
 /Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/service/OrderService.java
 /Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/dao/ShopTypeDao.java
+/Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/controllers/TestController.java
 /Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/controllers/PublicController.java
 /Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/domain/ShopGoods.java
 /Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/tools/TimeUtil.java
@@ -41,3 +43,4 @@
 /Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/controllers/android/AndroidPayController.java
 /Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/service/BrandService.java
 /Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/domain/ShopType.java
+/Users/liuwenwen/Desktop/AndroidShopping/src/main/java/com/clibchina/shopping/domain/dto/OrderSaleInfo.java

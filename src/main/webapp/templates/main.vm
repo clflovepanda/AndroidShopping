@@ -168,7 +168,7 @@
                           type: 'value',
                           name: '订单量',
                           min: 0,
-                          max: 100,
+                          max: 150,
                           interval: 16
                       }
                       ,
@@ -176,7 +176,7 @@
                           type: 'value',
                           name: '交易额',
                           min: 0,
-                          max: 12000,
+                          max: 14000,
                           interval: 1000
                       }
                   ],
