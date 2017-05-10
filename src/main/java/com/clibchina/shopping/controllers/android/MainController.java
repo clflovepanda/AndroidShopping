@@ -151,6 +151,9 @@ public class MainController {
         for (ShopCart shopCart : shopCartList) {
             ShopCartDto shopCartDto = new ShopCartDto();
             ShopGoods shopGoods = goodsService.getShopGoods(shopCart.getGoodsId());
+            if(null == shopGoods) {
+                continue;
+            }
             shopCartDto.setId(shopCart.getId());
             shopCartDto.setNum(shopCart.getNum());
             shopCartDto.setGoodsId(shopCart.getGoodsId());
@@ -183,6 +186,9 @@ public class MainController {
         for (ShopCart shopCart : shopCartList) {
             ShopCartDto shopCartDto = new ShopCartDto();
             ShopGoods shopGoods = goodsService.getShopGoods(shopCart.getGoodsId());
+            if(null == shopGoods) {
+                continue;
+            }
             shopCartDto.setId(shopCart.getId());
             shopCartDto.setNum(shopCart.getNum());
             shopCartDto.setGoodsId(shopCart.getGoodsId());
@@ -275,6 +281,9 @@ public class MainController {
                 List<ShopGoodsDto> shopGoodsDtos = new ArrayList<>(); // 定义一个数组,存放对应订单下商品
                 for (ShopOrderGoodsMapping shopOrderGoodsMapping : shopOrderGoodsMappings) { // 循环每个订单下商品
                     ShopGoods shopGoods = goodsService.getShopGoods(shopOrderGoodsMapping.getGoodsId());// 通过商品id拿到具体商品信息
+                   if(null == shopGoods) {
+                       continue;
+                   }
                     ShopGoodsDto shopGoodsDto = new ShopGoodsDto();
                     shopGoodsDto.setId(shopGoods.getId());
                     shopGoodsDto.setBrand(shopGoods.getBrand());

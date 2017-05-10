@@ -37,16 +37,16 @@ public class TestController {
     @RequestMapping(value = "/insertData")
     @ResponseBody
     public String insertData() {
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 500; i++) {
             Random random = new Random();
             ShopOrder shopOrder = new ShopOrder();
             shopOrder.setUserId(18);
-            shopOrder.setName("杨献彪");
+            shopOrder.setName("刘雯雯");
             shopOrder.setStatus(2);
             shopOrder.setTotalPrice(random.nextDouble() * 200);
-            shopOrder.setAddress("望京科创大厦A座4楼");
-            shopOrder.setNote("尽快送哦!!!");
-            shopOrder.setPhone("11111111111");
+            shopOrder.setAddress("黑大C区14栋228");
+            shopOrder.setNote("饿死了饿死了");
+            shopOrder.setPhone("15545111235");
             shopOrder.setSendTime(0);
             long timestamp = 1493107777000l + random.nextInt(1037000000);
             shopOrder.setCtime((int) (timestamp / 1000));

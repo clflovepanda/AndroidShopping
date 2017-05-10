@@ -61,7 +61,7 @@ public class AndroidPayController extends PublicController {
         StringBuffer msgInfo = new StringBuffer();
         for (ShopCart shopCart : shopCartList) {
             ShopGoods shopGoods = goodsService.getShopGoods(shopCart.getGoodsId());
-            msgInfo.append(","+shopGoods.getName());
+            msgInfo.append(","+shopGoods.getName()+":"+shopCart.getNum()+"份");
 //            goodsService.reduceShopGoodsStock(shopCart.getGoodsId(),shopCart.getNum());
             totalPrice += shopGoods.getPrice() * shopCart.getNum();
 
