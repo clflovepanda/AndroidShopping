@@ -126,6 +126,7 @@ public class AndroidPayController extends PublicController {
         shopOrder.setCtime(TimeUtil.getNow());
         shopOrder.setUtime(TimeUtil.getNow());
         shopOrder.setIsDiy(1);
+        shopOrder.setDt(TimeUtil.getToday());
         shopOrder.setMsg(result);
         orderService.addShopOrder(shopOrder);
 

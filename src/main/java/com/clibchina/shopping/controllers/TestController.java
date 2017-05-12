@@ -99,7 +99,7 @@ public class TestController {
         for (GoodsSaleInfo info : result) {
             String goodsName = goodsNameMap.get(info.getGoodsId());
             if (StringUtils.isBlank(goodsName)) {
-                info.setGoodsName("未知");
+                info.setGoodsName("'该商品已删除'");
             } else {
                 info.setGoodsName(goodsName);
             }
