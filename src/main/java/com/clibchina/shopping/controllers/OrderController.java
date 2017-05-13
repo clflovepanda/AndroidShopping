@@ -2,15 +2,11 @@ package com.clibchina.shopping.controllers;
 
 import com.alibaba.fastjson.JSONObject;
 import com.clibchina.shopping.domain.ShopOrder;
+import com.clibchina.shopping.domain.ShopOrderGoodsMapping;
+import com.clibchina.shopping.service.GoodsService;
+import com.clibchina.shopping.service.OrderGoodsMappingService;
 import com.clibchina.shopping.service.OrderService;
 import com.clibchina.shopping.service.UserService;
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.EncodeHintType;
-import com.google.zxing.MultiFormatWriter;
-import com.google.zxing.WriterException;
-import com.google.zxing.client.j2se.MatrixToImageWriter;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Hashtable;
 import java.util.List;
 
 
@@ -32,6 +27,10 @@ public class OrderController extends PublicController {
     UserService userService;
     @Autowired
     OrderService orderService;
+    @Autowired
+    GoodsService goodsService;
+    @Autowired
+    OrderGoodsMappingService orderGoodsMappingService;
 
     @RequestMapping(value = "/getOrderDetail", method = RequestMethod.GET)
     @ResponseBody
@@ -44,6 +43,10 @@ public class OrderController extends PublicController {
     public ModelAndView accpetOrder(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String orderId = request.getParameter("orderId");
         orderService.updateShopOrderSign(Integer.parseInt(orderId), 1);
+        List<ShopOrderGoodsMapping> goodsList = orderGoodsMappingService.getShopOrderGoodsMappingByOrderId(Integer.parseInt(orderId));
+        for(ShopOrderGoodsMapping shopCart:goodsList){
+            goodsService.reduceShopGoodsStock(shopCart.getGoodsId(),shopCart.getNum());
+        }
         return new ModelAndView("redirect:/order");
     }
 

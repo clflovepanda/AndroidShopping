@@ -81,11 +81,11 @@
         <div style="clear: both"></div>
     </div>
     #end
-    <div class="wx_nav" id="wx_nav">
-        <a href="/android/main?userName=${userName}" class="nav_index" id="nav_index">首页</a>
-        <a href="/android/shopping?userId=${userId}&userName=${userName}" class="nav_shopcart" id="nav_shopcart">购物车</a>
-        <a href="/android/myList?userId=${userId}&userName=${userName}&type=-1" class="nav_me" id="nav_me">订单</a>
     </div>
-    </div>
+<div class="wx_nav" id="wx_nav">
+    <a href="/android/main?userName=${userName}" class="nav_index" id="nav_index">首页</a>
+    <a href="/android/shopping?userId=${userId}&userName=${userName}" class="nav_shopcart" id="nav_shopcart">购物车</a>
+    <a href="/android/myList?userId=${userId}&userName=${userName}&type=-1" class="nav_me" id="nav_me">订单</a>
+</div>
 </body>
 </html>

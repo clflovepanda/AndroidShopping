@@ -33,8 +33,8 @@ public interface ShopGoodsDao {
     @Update("update shop_goods set name=#{name}, description=#{description}, type=#{type}, brand=#{brand}, origin_price=#{originPrice}, price=#{price}, stock=#{stock}, pic=#{pic}, buy_times=#{buyTimes}, sign=#{sign} where id = #{id}")
     public void updateShopGoodsById(ShopGoods shopGoods);
 
-    @Update("update shop_goods set stock += #{num}, buy_times += #{num} where id = #{id}")
-    public void reduceShopGoodsStockById(int id, int num);
+    @Update("update shop_goods set stock = stock- #{num}, buy_times = buy_times+ #{num} where id = #{id}")
+    public void reduceShopGoodsStockById(@Param("id") int id, @Param("num") int num);
 
     @Update("update shop_goods set sign=#{sign} where id = #{id}")
     public void updateShopGoodsSignById(int id, int sign);

@@ -3,12 +3,13 @@ package com.clibchina.shopping.controllers;
 import com.alibaba.fastjson.JSON;
 import com.clibchina.shopping.domain.ShopGoods;
 import com.clibchina.shopping.domain.ShopOrder;
+import com.clibchina.shopping.domain.ShopOrderGoodsMapping;
 import com.clibchina.shopping.domain.dto.GoodsSaleInfo;
 import com.clibchina.shopping.domain.dto.OrderSaleInfo;
 import com.clibchina.shopping.service.GoodsService;
 import com.clibchina.shopping.service.OrderGoodsMappingService;
 import com.clibchina.shopping.service.OrderService;
-import com.clibchina.shopping.domain.ShopOrderGoodsMapping;
+import com.clibchina.shopping.tools.TimeUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,11 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
-import com.clibchina.shopping.tools.TimeUtil;
+import java.util.*;
 
 /**
  * Created by yxb on 2017/5/7.
@@ -48,13 +45,19 @@ public class TestController {
             shopOrder.setNote("饿死了饿死了");
             shopOrder.setPhone("15545111235");
             shopOrder.setSendTime(0);
-            long timestamp = 1493107777000l + random.nextInt(1037000000);
+            long timestamp = System.currentTimeMillis() - random.nextInt(11*24*3600*1000);
             shopOrder.setCtime((int) (timestamp / 1000));
             shopOrder.setUtime((int) (timestamp / 1000));
             shopOrder.setSign(1);
             shopOrder.setIsDiy(0);
             ShopGoods shopGoods = goodsService.getShopGoods(7 + random.nextInt(8));
-            shopOrder.setMsg(shopGoods.getName());
+            String name="";
+            if(null==shopGoods){
+                name="鲜花蛋糕";
+            }else{
+                name=shopGoods.getName();
+            }
+            shopOrder.setMsg(name);
             shopOrder.setDt(test2(timestamp));
             orderService.addShopOrder(shopOrder);
         }
@@ -78,10 +81,10 @@ public class TestController {
         return "OK";
     }
 
-    @RequestMapping(value = "/orderSaleInfo")
+    @RequestMapping(value = "/orderSaleInfo") //接收首页请求
     @ResponseBody
     public String orderSaleInfo() {
-        List<OrderSaleInfo> result = orderService.getSaleInfoList();
+        List<OrderSaleInfo> result = orderService.getSaleInfoList(); //查库得到所有销售额订单量信息
         return JSON.toJSONString(result);
     }
 
@@ -96,15 +99,16 @@ public class TestController {
         for (ShopGoods sg : shopGoods) {
             goodsNameMap.put(sg.getId(), sg.getName());
         }
-        for (GoodsSaleInfo info : result) {
-            String goodsName = goodsNameMap.get(info.getGoodsId());
+        Iterator iterator = result.iterator();
+        while(iterator.hasNext()){
+            GoodsSaleInfo temp= (GoodsSaleInfo) iterator.next();
+            String goodsName = goodsNameMap.get(temp.getGoodsId());
             if (StringUtils.isBlank(goodsName)) {
-                info.setGoodsName("'该商品已删除'");
+                iterator.remove();
             } else {
-                info.setGoodsName(goodsName);
+                temp.setGoodsName(goodsName);
             }
         }
-
         return JSON.toJSONString(result);
     }
 
