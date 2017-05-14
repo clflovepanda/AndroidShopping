@@ -1,13 +1,9 @@
 package com.clibchina.shopping.service;
 
-import com.clibchina.shopping.dao.ShopTypeDao;
 import com.clibchina.shopping.dao.ShopUserDao;
-import com.clibchina.shopping.domain.ShopType;
 import com.clibchina.shopping.domain.ShopUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class UserService {
@@ -22,6 +18,15 @@ public class UserService {
 
     public boolean checkLogin(String userName, String password) {
         ShopUser shopUser = shopUserDao.queryShopUserByUserName(userName);
+        if (shopUser.getPassword().equals(password)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean checkLoginC(String userName, String password) {
+        ShopUser shopUser = shopUserDao.queryShopUserByCUserName(userName);
         if (shopUser.getPassword().equals(password)) {
             return true;
         } else {

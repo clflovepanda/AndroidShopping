@@ -1,11 +1,11 @@
 package com.clibchina.shopping.dao;
 
-import com.clibchina.shopping.domain.ShopType;
 import com.clibchina.shopping.domain.ShopUser;
-import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component
 public interface ShopUserDao {
@@ -20,6 +20,9 @@ public interface ShopUserDao {
 
     @Select("select " + SELECT_KEYS + " from shop_user where id = #{id}")
     public ShopUser queryShopUserById(int id);
+
+    @Select("select " + SELECT_KEYS + " from shop_c_user where name = #{userName}")
+    public ShopUser queryShopUserByCUserName(String userName);
 
     @Select("select " + SELECT_KEYS + " from shop_user where name = #{userName}")
     public ShopUser queryShopUserByUserName(String userName);

@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
     #parse("head.vm")
-    <script src="js/jquery.js"></script>
-    <script>
-        function login() {
-            var userName = document.getElementById("user_name").value;
-            var password = document.getElementById("password").value;
-            var url = "/login?userName=" + userName + "&password=" + password;
-            $.ajax({
-                type: "post",
-                url: url,
-                dataType: "json",
-                success: function(data) {
-                    var result = eval(data);
-                    if (result.status == 'ok') {
-                        location.href = "/main";
-                    } else {
-                        alert(result.msg);
-                    }
-                },
-                error: function(data) {
-                    alert("error");
+<script src="js/jquery.js"></script>
+<script>
+    function login() {
+        var userName = document.getElementById("user_name").value;
+        var password = document.getElementById("password").value;
+        var url = "/login?userName=" + userName + "&password=" + password;
+        $.ajax({
+            type: "post",
+            url: url,
+            dataType: "json",
+            success: function(data) {
+                var result = eval(data);
+                if (result.status == 'ok') {
+                    location.href = "/main";
+                } else {
+                    alert(result.msg);
                 }
-            });
-        }
-    </script>
-  <body class="login-body">
-    <div class="container">
+            },
+            error: function(data) {
+                alert("error");
+            }
+        });
+    }
+</script>
+<body class="login-body">
+<div class="container">
 
-      <form class="form-signin">
+    <form class="form-signin">
         <h2 class="form-signin-heading">登录</h2>
         <div class="login-wrap">
             <input type="text" class="form-control" placeholder="用户名" id="user_name" autofocus>
             <input type="password" class="form-control" placeholder="密码" id="password">
-            <label class="checkbox">
-##                <input type="checkbox" value="remember-me"> ��ס����
-                <span class="pull-right"> <a href="/changePasswordPage"> ��������?</a></span>
-            </label>
             <div class="btn btn-lg btn-login btn-block" onclick="login()" >登录</div>
             <label class="checkbox">
-                <span class="pull-right"> <a href="/registerPage"> ע���ʻ�</a></span>
+                <span class="pull-right"><a href="/registerPage">注册</a></span>
             </label>
         </div>
-      </form>
+    </form>
 
-    </div>
+</div>
 
 
-  </body>
+</body>
 </html>

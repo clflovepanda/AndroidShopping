@@ -45,7 +45,7 @@ public class IndexController {
     @RequestMapping(value = "/")
     @ResponseBody
     public ModelAndView loginPage() {
-        return new ModelAndView("login");
+        return new ModelAndView("register");
     }
 
     @RequestMapping(value = "/changePasswordPage")

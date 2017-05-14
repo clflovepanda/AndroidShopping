@@ -1,16 +1,13 @@
 package com.clibchina.shopping.controllers;
 
 import com.alibaba.fastjson.JSONObject;
-import com.clibchina.shopping.domain.ShopType;
 import com.clibchina.shopping.domain.ShopUser;
-import com.clibchina.shopping.service.TypeService;
 import com.clibchina.shopping.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -28,7 +25,7 @@ public class LoginController extends PublicController {
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
 
-        boolean bool = userService.checkLogin(userName, password);
+        boolean bool = userService.checkLoginC(userName, password);
 
         JSONObject jsonObject = new JSONObject();
         if (bool) {
