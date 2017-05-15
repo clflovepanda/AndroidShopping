@@ -25,7 +25,7 @@ public class LoginController extends PublicController {
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
 
-        boolean bool = userService.checkLoginC(userName, password);
+        boolean bool = userService.checkLogin(userName, password);
 
         JSONObject jsonObject = new JSONObject();
         if (bool) {

@@ -30,7 +30,6 @@
     <div class="ewm">
        <ul>
            <li class="li1">¶©µ¥ºÅ£º${orderId}</li>
-           <li class="li2"><a href="javascript:;" class="tcewm"><img class="tcewm" src="/getQRCode?url=www.baidu.com" alt="¶þÎ¬Âë" style="width: 40px;height: 40px"/></a></li>
        </ul>
     </div>
     <div class="ckdd">
@@ -45,13 +44,6 @@
             <a href="/android/myList?userId=${userId}&userName=${userName}&type=-1" class="nav_me on" id="nav_me on">¶©µ¥</a>
         </div>
     </div>
-<div class="dewm">
-
-   <div>
-       <img src="/getQRCode?url=http://www.baidu.com" alt="Ïû·Ñ¶þÎ¬Âë" style="margin: 0 auto;">
-   </div>
-
-</div>
 <div class="theme-popover-mask"></div>
 </body>
 </html>

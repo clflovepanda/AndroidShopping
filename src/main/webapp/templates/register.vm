@@ -41,7 +41,7 @@
         var password = document.getElementById("password").value;
         var url = "/login?userName=" + userName + "&password=" + password ;
         $.ajax({
-            type: "post",
+            type: "get",
             url: url,
             dataType: "json",
             success: function(data) {

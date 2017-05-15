@@ -1,16 +1,14 @@
 package com.clibchina.shopping.service;
 
 import com.clibchina.shopping.dao.ShopCartDao;
-import com.clibchina.shopping.dao.ShopUserDao;
 import com.clibchina.shopping.domain.ShopCart;
-import com.clibchina.shopping.domain.ShopUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
- * Created by changlifeng on 17/4/18.
+ * Created by 刘雯雯 on 17/4/18.
  */
 @Service
 public class CartService {

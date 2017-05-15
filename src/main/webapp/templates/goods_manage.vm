@@ -3,39 +3,6 @@
     #parse("head.vm")
 
     <script>
-            // 开始上传图片
-           function uploadImage(evt) {
-                var file;
-                try {
-                    file = evt.target.files[0];
-                } catch (e) {
-                    return;
-                }
-                // 若为空则返回
-                if (file === undefined) return;
-                // 前端校验图片大小不能超过5M
-                if(file.size/1000000 > 5) {
-                    $(this).val('');
-                    return;
-                }
-
-                var reader = new FileReader();
-                reader.readAsDataURL(file);
-                reader.onload = function(evt) {
-                    var base64Pic = evt.target.result;
-
-                    // 若不为jpg格式img  则返回
-                    if (-1 == base64Pic.indexOf('/9j')) {
-                        return;
-                    }
-                    $.post("", {multipart: base64Pic.substr(base64Pic.indexOf('/9j'))}, function(ret) {
-                        if (ret.code == 0) {
-
-                        } else {
-                        }
-                    });
-                }
-            };
         function addGoodsDialog() {
             layer.open({
                 type: 1,
@@ -204,7 +171,6 @@
       <div style="padding: 10px">
           <input class="form-control" placeholder="商品名称" style="margin-top: 15px" id="add_goods_name" />
           <input class="form-control" placeholder="商品描述" style="margin-top: 15px" id="add_goods_description" />
-          <input class="form-control" placeholder="上传图片" style="margin-top: 15px" type="file" onchange="uploadImage(this)" id="upload_img" />
           <select id="add_goods_type" class="form-control" style="margin-top: 15px">
               #foreach( ${info} in ${typeDomains})
                 <option value="${info.getId()}">${info.getTypeName()}</option>
@@ -232,7 +198,6 @@
           <input type="hidden" id="edit_goods_id" />
           <input class="form-control" placeholder="商品名称" style="margin-top: 15px" id="edit_goods_name" />
           <input class="form-control" placeholder="商品描述" style="margin-top: 15px" id="edit_goods_description" />
-          <input type="file" class="from-control" style="margin-top: 15px" id="img">
           <select id="edit_goods_type" class="form-control" style="margin-top: 15px">
               #foreach( ${info} in ${typeDomains})
                   <option value="${info.getId()}">${info.getTypeName()}</option>

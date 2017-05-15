@@ -11,12 +11,11 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.nio.file.Path;
 import java.util.Hashtable;
 
 /**
- * Created by changlifeng on 17/2/9.
+ * Created by 刘雯雯 on 17/2/9.
  */
 public class Test {
 

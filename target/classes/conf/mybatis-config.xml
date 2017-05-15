@@ -3,77 +3,7 @@
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-	
-	
-	<!--&lt;!&ndash; 加载类路径下的属性文件 &ndash;&gt;-->
-	<!--<properties resource="db.properties"/>-->
-
-	<!--基本配置-->
 	<settings>
-		<!--<setting name="cacheEnabled" value="false"/>-->
-		<!--<setting name="lazyLoadingEnabled" value="true"/>-->
-		<!--<setting name="aggressiveLazyLoading" value="false"/>-->
-		<!--<setting name="multipleResultSetsEnabled" value="true"/>-->
-		<!--<setting name="useColumnLabel" value="true"/>-->
-		<!--<setting name="defaultExecutorType" value="SIMPLE"/>-->
-		<!--<setting name="defaultStatementTimeout" value="10"/>-->
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
-		<!-- 是否使用插入数据后自增主键的值，需要配合keyProperty使用 -->
-		<!--<setting name="useGeneratedKeys" value="true"/>-->
 	</settings>
-
-	 <!--设置类型别名 -->
-	<!--<typeAliases>-->
-		<!--<typeAlias type="cn.itcast.mybatis.app09_CRUD.Student" alias="student"/>-->
-		<!--<typeAlias type="zhang.yuan.bo.domain.Person" alias="person"/>-->
-	<!--</typeAliases>-->
-	
-
-	<!--&lt;!&ndash; 设置一个默认的连接环境信息 &ndash;&gt;-->
-	<!--<environments default="mysql_developer">-->
-	<!-- -->
-	<!-- -->
-		<!--&lt;!&ndash; 连接环境信息，取一个任意唯一的名字 &ndash;&gt;-->
-		<!--<environment id="mysql_developer">-->
-			<!--&lt;!&ndash; mybatis使用jdbc事务管理方式 &ndash;&gt;-->
-			<!--<transactionManager type="jdbc"/>-->
-			<!--&lt;!&ndash; mybatis使用连接池方式来获取连接 &ndash;&gt;-->
-			<!--<dataSource type="pooled">-->
-				<!--&lt;!&ndash; 配置与数据库交互的4个必要属性 &ndash;&gt;-->
-				<!--<property name="driver" value="${mysql.driver}"/>-->
-				<!--<property name="url" value="${mysql.url}"/>-->
-				<!--<property name="username" value="${mysql.username}"/>-->
-				<!--<property name="password" value="${mysql.password}"/>-->
-			<!--</dataSource>-->
-		<!--</environment>-->
-		<!-- -->
-
-		<!--&lt;!&ndash; 连接环境信息，取一个任意唯一的名字 &ndash;&gt;-->
-		<!--<environment id="oracle_developer">-->
-			<!--&lt;!&ndash; mybatis使用jdbc事务管理方式 &ndash;&gt;-->
-			<!--<transactionManager type="jdbc"/>-->
-			<!--&lt;!&ndash; mybatis使用连接池方式来获取连接 &ndash;&gt;-->
-			<!--<dataSource type="pooled">-->
-				<!--&lt;!&ndash; 配置与数据库交互的4个必要属性 &ndash;&gt;-->
-				<!--<property name="driver" value="${oracle.driver}"/>-->
-				<!--<property name="url" value="${oracle.url}"/>-->
-				<!--<property name="username" value="${oracle.username}"/>-->
-				<!--<property name="password" value="${oracle.password}"/>-->
-			<!--</dataSource>-->
-		<!--</environment>-->
-
-	<!--</environments>-->
-
-	<!--&lt;!&ndash; 加载映射文件&ndash;&gt;-->
-	<!--<mappers>-->
-		<!--<mapper resource="sqlMapper.StudentMapper2.xml"/>-->
-		<!--<mapper resource="PersonMapper.xml"/>-->
-		<!--<mapper resource="sqlMapper/StudentMapper2.xml"/>-->
-		<!--<mapper resource="sqlMapper/PersonMapper.xml"/>-->
-		<!--<mapper class="cn.itcast.mybatis.app16_person.PersonDao"/>-->
-		<!--<mapper resource="mybatisConfig/sqlMapper/PersonMapper.xml"/>-->
-	<!--</mappers>-->
-
-
-	
 </configuration>

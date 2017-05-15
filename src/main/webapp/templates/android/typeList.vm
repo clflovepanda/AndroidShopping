@@ -70,7 +70,7 @@
     <div class="allsp">
         #foreach( ${info} in ${goodsDomains})
             <figure>
-                <a href="javascript:;"><img src="${info.getPic()}" alt="商品" class="xqtp"/></a>
+                <a href="javascript:;"><img src="${info.getPic()}" alt="商品" class="xqtp" style="width:100%;height:120.328px"/></a>
                 <p>${info.getName()}</p>
                 <p>${info.getDescription()}</p>
                 <div class="info">

@@ -1,7 +1,7 @@
 package com.clibchina.shopping.domain.dto;
 
 /**
- * Created by changlifeng on 17/4/18.
+ * Created by 刘雯雯 on 17/4/18.
  */
 public class ShopGoodsDto {
 

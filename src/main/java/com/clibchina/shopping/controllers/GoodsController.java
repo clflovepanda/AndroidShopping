@@ -1,13 +1,9 @@
 package com.clibchina.shopping.controllers;
 
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.DoubleSerializer;
-import com.clibchina.shopping.controllers.PublicController;
-import com.clibchina.shopping.domain.ShopBrand;
 import com.clibchina.shopping.domain.ShopGoods;
 import com.clibchina.shopping.service.BrandService;
 import com.clibchina.shopping.service.GoodsService;
-import com.clibchina.shopping.tools.TimeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,7 +43,7 @@ public class GoodsController extends PublicController {
         shopGoods.setPrice(Double.parseDouble(price));
         shopGoods.setStock(Integer.parseInt(stock));
         shopGoods.setSign(Integer.parseInt(sign));
-        shopGoods.setPic("/Goods/img/u67.png");
+        shopGoods.setPic("/android/img/33.jpg");
         shopGoods.setBuyTimes(0);
         goodsService.addShopGoods(shopGoods);
         JSONObject jsonObject = new JSONObject();

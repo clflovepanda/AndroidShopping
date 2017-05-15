@@ -124,19 +124,19 @@ public class MainController {
         return new ModelAndView("android/diyTypeList");
     }
 
-    @RequestMapping(value = "/goodsDetail")
-    @ResponseBody
-    public ModelAndView goodsDetailPage(Model model,
-                                        @RequestParam("goodsId") int goodsId,
-                                        @RequestParam("type") int type,
-                                        @RequestParam("userName") String userName,
-                                        @RequestParam("userId") int userId) {
-        Map<String, Object> result = new HashMap<>();
-        result.put("userName", userName);
-        result.put("userId", userId);
-        model.addAllAttributes(result);
-        return new ModelAndView("android/goodsDetail");
-    }
+//    @RequestMapping(value = "/goodsDetail")
+//    @ResponseBody
+//    public ModelAndView goodsDetailPage(Model model,
+//                                        @RequestParam("goodsId") int goodsId,
+//                                        @RequestParam("type") int type,
+//                                        @RequestParam("userName") String userName,
+//                                        @RequestParam("userId") int userId) {
+//        Map<String, Object> result = new HashMap<>();
+//        result.put("userName", userName);
+//        result.put("userId", userId);
+//        model.addAllAttributes(result);
+//        return new ModelAndView("android/goodsDetail");
+//    }
 
     @RequestMapping(value = "/shopping")
     @ResponseBody

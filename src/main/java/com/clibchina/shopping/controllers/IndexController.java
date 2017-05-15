@@ -48,17 +48,17 @@ public class IndexController {
         return new ModelAndView("register");
     }
 
-    @RequestMapping(value = "/changePasswordPage")
-    @ResponseBody
-    public ModelAndView changePasswordPage() {
-        return new ModelAndView("change_password");
-    }
+//    @RequestMapping(value = "/changePasswordPage")
+//    @ResponseBody
+//    public ModelAndView changePasswordPage() {
+//        return new ModelAndView("change_password");
+//    }
 
-    @RequestMapping(value = "/registerPage")
-    @ResponseBody
-    public ModelAndView registerPage() {
-        return new ModelAndView("register");
-    }
+//    @RequestMapping(value = "/registerPage")
+//    @ResponseBody
+//    public ModelAndView registerPage() {
+//        return new ModelAndView("register");
+//    }
 
     @RequestMapping(value = "/main")
     @ResponseBody

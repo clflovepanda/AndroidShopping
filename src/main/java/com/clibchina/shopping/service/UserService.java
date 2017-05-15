@@ -25,15 +25,6 @@ public class UserService {
         }
     }
 
-    public boolean checkLoginC(String userName, String password) {
-        ShopUser shopUser = shopUserDao.queryShopUserByCUserName(userName);
-        if (shopUser.getPassword().equals(password)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public boolean register(ShopUser shopUser) {
         ShopUser temp = shopUserDao.queryShopUserByUserName(shopUser.getName());
         if (temp == null) {
