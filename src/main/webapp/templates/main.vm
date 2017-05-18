@@ -3,7 +3,6 @@
 #parse("head.vm")
 
 <body>
-
     <section id="container" class="" style="height:100%">
         #parse("header.vm")
         #parse("side_bar_menu.vm")
@@ -20,7 +19,7 @@
                                         <i class="icon-bar-chart"></i>
                                     </div>
                                     <div class="value">
-                                        <h1>12</h1>
+                                        <h1 class="num">0</h1>
                                         <p>今日订单量</p>
                                     </div>
                                 </section>
@@ -31,7 +30,7 @@
                                         <i class="icon-yen (alias)"></i>
                                     </div>
                                     <div class="value">
-                                        <h1>268.96</h1>
+                                        <h1 class="price">0</h1>
                                         <p>今日交易额</p>
                                     </div>
                                 </section>
@@ -78,7 +77,9 @@
             var countNum = [],
                     countPrice = [],
                     countDate = [],
-                   pieData = [];
+                   pieData = [],
+                    todayNum,
+                    todayPrice;
             $.ajax({
                 url: "/orderSaleInfo",
                 dataType: "json",
@@ -115,6 +116,15 @@
                 error: function() {
 
 
+                }
+            });
+            $.ajax({
+                url: "/orderTodaySaleInfo",
+                dataType: "json",
+                type: "get",
+                success: function(res) {
+                    $('.num').text(res[0].orderNum) ;
+                    $('.price').text(res[0].totalPrice);
                 }
             });
             $.ajax({

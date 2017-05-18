@@ -59,4 +59,12 @@ public class OrderService {
         List<OrderSaleInfo> orderSaleInfos = shopOrderDao.countSaleCountInfo(startTime, endTime);
         return orderSaleInfos;
     }
+    public List<OrderSaleInfo> getTodaySaleInfoList() {
+        long current=System.currentTimeMillis();//当前时间毫秒数
+        long zero=current/(1000*3600*24)*(1000*3600*24)- TimeZone.getDefault().getRawOffset();//今天零点零分零秒的毫秒数
+        int startTime = (int) (zero/1000);
+        int endTime = startTime+1*24*3600;
+        List<OrderSaleInfo> orderSaleInfos = shopOrderDao.countSaleCountInfo(startTime, endTime);
+        return orderSaleInfos;
+    }
 }

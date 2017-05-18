@@ -19,13 +19,13 @@ public class LoginController extends PublicController {
     @Autowired
     UserService userService;
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     @ResponseBody
     public void login(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
 
-        boolean bool = userService.checkLogin(userName, password);
+        boolean bool = userService.checkCLogin(userName, password);
 
         JSONObject jsonObject = new JSONObject();
         if (bool) {

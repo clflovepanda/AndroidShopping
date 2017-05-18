@@ -88,6 +88,12 @@ public class TestController {
         return JSON.toJSONString(result);
     }
 
+    @RequestMapping(value = "/orderTodaySaleInfo")
+    @ResponseBody
+    public String orderTodaySaleInfo() {
+        List<OrderSaleInfo> result = orderService.getTodaySaleInfoList();
+        return JSON.toJSONString(result);
+    }
 
     @RequestMapping(value = "/goodsSaleInfo")
     @ResponseBody
